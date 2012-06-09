@@ -1,0 +1,220 @@
+[[file:orgcard.txt]]
+
+* Tasks
+  #+CATEGORY: Tasks
+* Calendar
+  #+CATEGORY: Calendar
+** TODO Review Weekly
+   SCHEDULED: <2010-08-08 Sun +1w>
+   - State "DONE"       from "TODO"       [2010-08-02 Mon 15:54]
+   :PROPERTIES:
+   :LAST_REPEAT: [2010-08-02 Mon 15:54]
+   :END:
+   [[file:weekly_review.org][Open Weekly Review Checklist]]
+
+* School                                                              :SCHOOL:
+* Projects
+  #+CATEGORY: Projects
+** thesisReloaded
+** re
+** python                                                          :COMPUTER:
+*** pytest
+    py.test -q test_sysexit.py  #quiet mode
+** emacs                                                            :COMPUTER:
+*** commands
+  + c-u smaze vse k mistu
+  + c-m-f                       # ---> ) forwrd brackets
+  + c-x-0 zavre okno            
+  + c-h-v variable
+  + m-x-y list yank in kill ring
+  + c-u-c-spc go to the c-spc
+  + m-x cua # editace celeho bloku
+  + m-d delete right word
+  + m-t words reverse
+  + m-;                         # comment
+  + c-y                         # buffer je open ale ne c-x-b
+  + ctags                       # program na generovani tagu
+  + m-<-                        # delete left word
+    
+*** modes
+    flyspell
+    follow-mode
+    flymake                     # ? jak na python ?
+    whitespace                  # chybne mezery
+*** key bind
+    c-h-m                       # show bindings 
+    (global-set-key [f6] 'neco)
+    (global-set-key (kbd "M-x") 'neco)
+*** vc
+    c-x-v                       # diff oproti head
+    c-x-v-u                     # discard changes
+    c-x-v-~                     # checkout rev
+    c-x-v-l                     # log
+    c-x-v-i                     # add
+*** magit
+    c-x g
+    s                           # stage
+    u                           # unstage
+    TAB                         # changes
+    c                           # commmit buffer
+    c-c c-c                     # commit
+    P                           # push
+    F                           # pull
+    z                           # stash 
+    k                           # unstage/delete
+    x                           # rewrite history
+** git                                                              :COMPUTER:
+*** git internals
+*** configure
+    .gitignore  v projektu
+    .git/
+*** commands
+    git ls-files
+    git log --stat
+    git log -p
+    gitk --all # graphs
+*** brachning
+    git branch # list branches
+    git branch name # create branch
+    git checkout # change branch # or git co -b branch
+    git merge # merge two branches
+    git diff b1 b2 # diff of branches
+    git reset --hard ORIG_HEAD # zpet
+    git stash # save changes for later use
+    git stash list # zmeny
+    
+*** repositories
+    git clone
+    git push # git push <rep> <branch>
+    git pull = fetch + merge
+    git remote show
+    git remote add <name> url # zapise se do .git/config
+
+*** tracking
+    set in .git/config
+    git branch --track <branch> url
+*** DONE stazena kniha git internals 
+    CLOSED: [2010-08-01 Sun 01:26]
+   
+* Video
+** DONE The brain                                                      :VIDEO:
+   SCHEDULED: <2010-08-08 Sun> CLOSED: [2010-08-11 Wed 15:47]
+**** big4
+     - goal setting
+     - visualization
+     - self talk
+     - arousal control
+**** orgasm
+     - holkjy vypnou mozek. Muzou i ztratit vedomi
+   
+**** psychopati
+     - o 17% mensi amygdala
+     - nepropojene frontal lobs a amygdala
+
+**** memory
+     - po celem mozku ale bez hippocampus + limbdic system zadne nova pamet
+    
+
+
+* Regular
+
+** DONE [[http://www.abclinuxu.cz/autori/david-watzke][Unixové nástroje]]                                            :COMPUTER:
+   SCHEDULED: <2010-07-31 Sat +1d>
+   - State "DONE"       from ""           [2010-10-19 Tue 01:33]
+   - State "DONE"       from ""           [2010-08-04 Wed 20:31]
+   - State "DONE"       from ""           [2010-08-03 Tue 16:27]
+   :PROPERTIES:
+   :LAST_REPEAT: [2010-10-19 Tue 01:33]
+   :END:
+   | right | value |
+   |-------+-------|
+   | r--   |     4 |
+   | -w-   |     2 |
+   | --x   |     1 |
+   
+*** nohup
+    nohup fatrat &> /dev/null < /dev/null &  #bezi i po zavreni konsole
+
+*** find
+    # vyhledá adresáře, které mají oprávnění 777 nebo patří uživateli „dave“ (nebo splňují obě podmínky)
+    find -type d -perm 777 -o -user dave
+
+    # vyhledá vše kromě obyčejných souborů
+    find ! -type f
+
+    # vyhledá soubory, které patří uživateli „dave“, a zároveň „adresáře“ s oprávněním 775 a skupinou jinou než „home“
+    find '(' -type f -user dave ')' -o \( -type d -perm 775 ! -group home \)
+
+    # najde soubory s příponou .pdf či .ps
+    find -type f -name '*.pdf' -o -name '*.ps'
+
+    # vypisuje pouze výstup programu lame
+    find -type f -name '*.mp3' -exec lame --decode "{}" \;
+
+    # hledá soubory a adresáře s časem posledním změny pozdějším, než má „soubor.txt“
+    find -newer soubor.txt
+
+
+
+*** at, sleep, wait
+*** split
+    rozdeli souber na mesi
+*** dd
+    nizkourovnove kopirovani dat (data destroyer;-)
+*** grep
+    global / regular expression / print
+    -E rozsirene regex == egrep
+    -i no upper/lower case
+    -q bez vystupu 0 pokud  nalezen
+    -c pocet radku
+    -l nazvy souboru
+    -v neguje
+    -r recursive
+    -C context (n radek okolo)
+* Settings
+** notebook Fujitsu
+*** reinstall <2010-12-06 Mon>
+**** backup
+***** [X] etc 
+***** [X] projects
+***** [X] video/documents
+***** [X] JDownloader
+***** [X] audio
+***** [X] pic
+***** [X] ~/bin
+***** [X] ~/scripts
+***** [X] .emacs
+***** [X] .gitconfig
+***** [X] .wmii
+***** [X] .python-acr
+***** [X] bookmarks
+***** [X] feeds
+***** [X] zpracovat/DarkMatter
+***** [X] zpracovat/Cosmology
+      
+*** emacs
+    - <2010-08-01 Sun> nastaveni ido z [[http://github.com/technomancy/emacs-starter-kit][peepcode]]
+
+* Financial
+  #+CATEGORY: Financial
+* Health
+** Vaha
+   | datum            | vaha | kde       |   |
+   |------------------+------+-----------+---|
+   | <2010-10-30 Sat> | 73.5 | posilovna |   |
+   | <2010-11-03 Wed> |   74 | posilovna |   |
+   | <2012-04-14 Sat> |   69 | grohova   |   |
+
+* org-mode configuration
+#+STARTUP: content
+#+STARTUP: hidestars
+#+STARTUP: logdone
+#+PROPERTY: Effort_ALL  0:10 0:20 0:30 1:00 2:00 4:00 6:00 8:00
+#+COLUMNS: %38ITEM(Details) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}
+#+PROPERTY: Effort_ALL 0 0:10 0:20 0:30 1:00 2:00 3:00 4:00 8:00
+#+TAGS: { SCHOOL(s) HOME(h) CERN(c)} COMPUTER(o) PROJECT(p) READING(r) 
+#+TAGS: AUDIO(a) VIDEO(v) TEXT(t) TTC(c) MIT(i) YALE(y) MUNI(m)
+#+SEQ_TODO: TODO(t) STARTED(s) WAITING(w) APPT(a) | DONE(d) CANCELLED(c) DEFERRED(f)
+
+  
+
